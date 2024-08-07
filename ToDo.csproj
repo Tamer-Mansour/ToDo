@@ -16,4 +16,13 @@
     <Folder Include="Photos\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Photos\John_Cena_2024.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Photos\Screenshot 2024-08-05 134216.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

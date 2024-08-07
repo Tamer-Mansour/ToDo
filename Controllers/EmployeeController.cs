@@ -28,10 +28,10 @@ namespace ToDo.Controllers
         {
             var employees = new List<Employee>();
             string query = @"
-                            SELECT EmployeeId, EmployeeName, Department,
-                                   CONVERT(varchar(10), DateOfJoining, 120) AS DateOfJoining,
-                                   PhotoFileName
-                            FROM dbo.Employee";
+        SELECT EmployeeId, EmployeeName, Department,
+               DateOfJoining,
+               PhotoFileName
+        FROM dbo.Employee";
 
             string sqlDataSource = _configuration.GetConnectionString("ToDo");
 
@@ -51,6 +51,7 @@ namespace ToDo.Controllers
                                     EmployeeId = Convert.ToInt32(myReader["EmployeeId"]),
                                     EmployeeName = myReader["EmployeeName"].ToString(),
                                     Department = myReader["Department"].ToString(),
+                                    // Handle DateOfJoining as DateTime?
                                     DateOfJoining = myReader["DateOfJoining"] as DateTime?,
                                     PhotoFileName = myReader["PhotoFileName"].ToString()
                                 };
@@ -68,6 +69,7 @@ namespace ToDo.Controllers
 
             return Ok(employees);
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Employee emp)
@@ -298,7 +300,7 @@ namespace ToDo.Controllers
                     return BadRequest("Invalid file name.");
                 }
 
-                var uploadsFolder = Path.Combine(_env.WebRootPath, "Photos");
+                var uploadsFolder = Path.Combine(_env.ContentRootPath, "Photos");
                 if (string.IsNullOrWhiteSpace(uploadsFolder))
                 {
                     throw new ArgumentNullException(nameof(uploadsFolder), "Uploads folder path cannot be null.");

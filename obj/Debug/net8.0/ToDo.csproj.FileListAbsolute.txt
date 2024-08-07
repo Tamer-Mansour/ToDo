@@ -40,3 +40,4 @@ C:\Users\PC\Desktop\TamerBasic\project\todo\ToDo\ToDo\bin\Debug\net8.0\Microsoft
 C:\Users\PC\Desktop\TamerBasic\project\todo\ToDo\ToDo\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\PC\Desktop\TamerBasic\project\todo\ToDo\ToDo\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\PC\Desktop\TamerBasic\project\todo\ToDo\ToDo\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\PC\Desktop\TamerBasic\project\todo\ToDo\ToDo\obj\Debug\net8.0\ToDo.sourcelink.json
